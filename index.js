@@ -10,6 +10,22 @@ var connection = mysql.createConnection({
   database: "employee_tracker_db",
 });
 
+inquirer
+.prompt()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Starting databse connection
 connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
