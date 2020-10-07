@@ -6,22 +6,22 @@ USE employee_tracker_db;
 
 CREATE TABLE department (
     id INTEGER NOT NULL AUTO_INCREMENT,
-    name VARCHAR(55),
+    name VARCHAR(55) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE role (
     id INTEGER NOT NULL AUTO_INCREMENT,
-    title VARCHAR(55),
-    salary DECIMAL,
+    title VARCHAR(55) NOT NULL,
+    salary DECIMAL NOT NULL,
     department_id INTEGER,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE employee (
     id INTEGER NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(55),
-    last_name VARCHAR(55),
+    first_name VARCHAR(55) NOT NULL,
+    last_name VARCHAR(55) NOT NULL,
     role_id INTEGER,
     manager_id INTEGER NULL,
     PRIMARY KEY (id)
@@ -37,4 +37,7 @@ VALUES ("Sales Lead", 100000.00, 1), ("Salesperson", 80000.00, 1),
 ("Lawyer", 190000.00, 4);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Kingston", "Phelps", 1), ("Johnny", "Ryder", 3), ("Phil", "Robinson", 4), ("Kali", "Hutchins", 2);
+VALUES ("Kingston", "Phelps", 1), ("Johnny", "Ryder", 3);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Phil", "Robinson", 4, 2), ("Kali", "Hutchins", 2, 1);
