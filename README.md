@@ -24,7 +24,7 @@ To use this application, run 'npm install' to install the inquirer and mysql pac
 
 ## Usage 
 
-The user must run 'node index.js' in order to start their local server. This will then open up a prompt in the temrinal which allows the user to do the three baic functions of this application, as mentioned in the [Description](#description). 
+The user must run 'node index.js' in order to start their local server. This will then open a prompt in the temrinal which allows the user to do the three baic functions of this application, as mentioned in the [Description](#description). 
 
 ## Credits
 
